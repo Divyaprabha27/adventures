@@ -33,4 +33,26 @@ document.addEventListener('DOMContentLoaded', () => {
             themeIcon.classList.add('bi-moon-stars-fill');
         }
     }
+
+    // Scroll to Top Button Logic
+    const scrollToTopBtn = document.createElement("button");
+    scrollToTopBtn.id = "scrollToTopBtn";
+    scrollToTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
+    scrollToTopBtn.title = "Go to top";
+    document.body.appendChild(scrollToTopBtn);
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    };
+
+    scrollToTopBtn.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 });
