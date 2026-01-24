@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Adventure Travel Agency</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Login Section -->
+    <section class="flex-grow-1 d-flex align-items-center justify-content-center position-relative"
+        style="background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5 col-xl-4">
+                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden animate-fade-up">
+                        <div class="card-body p-4 p-md-5 text-center">
+                            <h2 class="fw-bold mb-2">Welcome Back</h2>
+
+                            <form>
+                                <div class="mb-3 text-start">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com"
+                                        required>
+                                </div>
+                                <div class="mb-3 text-start">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="••••••••"
+                                        required>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                                        <label class="form-check-label small text-muted" for="rememberMe">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <a href="#" class="text-decoration-none small text-primary fw-medium">Forgot
+                                        Password?</a>
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-gradient w-100 rounded-pill py-2 fw-bold shadow-sm">Sign In</button>
+
+                                <div class="d-flex align-items-center my-3">
+                                    <hr class="flex-grow-1" style="border-top: 1px solid #ccc;">
+                                    <span class="mx-3 text-muted small fw-bold">OR</span>
+                                    <hr class="flex-grow-1" style="border-top: 1px solid #ccc;">
+                                </div>
+
+                                <div class="d-flex gap-2">
+                                    <a href="#"
+                                        class="btn btn-outline-dark w-50 rounded-pill py-2 d-flex align-items-center justify-content-center text-decoration-none">
+                                        <i class="bi bi-google me-2"></i> <span class="small fw-medium">Google</span>
+                                    </a>
+                                    <a href="#"
+                                        class="btn btn-outline-dark w-50 rounded-pill py-2 d-flex align-items-center justify-content-center text-decoration-none">
+                                        <i class="bi bi-facebook me-2"></i> <span
+                                            class="small fw-medium">Facebook</span>
+                                    </a>
+                                </div>
+                            </form>
+
+                            <div class="mt-4 pt-3 border-top border-light-subtle">
+                                <p class="text-muted small mb-0">Don't have an account? <a href="signup.html"
+                                        class="text-primary fw-bold text-decoration-none">Sign up</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

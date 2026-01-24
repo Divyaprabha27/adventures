@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Adventure Travel Agency</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- 1st Column: Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="Adventure Travel Logo" height="50">
+                <span>Adventure Travel Agency</span>
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Center and Right Content -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+
+                <!-- 2nd Column: Menu (Center) -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trips.html">Trips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="build-trip.html">Build Trip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- 3rd Column: Actions (Right) -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="login.html" class="btn btn-outline-primary btn-sm rounded-pill login-btn">Login</a>
+                    <a href="signup.html" class="btn btn-primary btn-sm rounded-pill signup-btn">Sign Up</a>
+                    <a href="dashboard.html" class="btn btn-gradient btn-sm rounded-pill px-3">Dashboard</a>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="btn btn-link nav-link p-0 ms-2" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="container mt-5 pt-5 pb-3">
+        <div class="text-center mt-5">
+            <h6 class="text-uppercase text-primary fw-bold tracking-wider">Get in Touch</h6>
+            <h1 class="display-4 fw-bold">Contact Us</h1>
+            <p class="lead text-muted">Have a question or ready to book? We'd love to hear from you.</p>
+        </div>
+    </div>
+
+    <!-- Contact Content -->
+    <section class="pb-5">
+        <div class="container pb-5">
+            <div class="row g-5">
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <div class="card destination-card border-0 shadow-sm p-4 h-100">
+                        <h3 class="fw-bold mb-4">Contact Information</h3>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon-box me-3">
+                                <i class="bi bi-geo-alt fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Our Office</h5>
+                                <p class="text-muted mb-0">123 Adventure Way, Explorer City, EC 90210</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon-box me-3">
+                                <i class="bi bi-envelope fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Email Us</h5>
+                                <p class="text-muted mb-0">hello@adventuretravel.com</p>
+                                <p class="text-muted mb-0">support@adventuretravel.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon-box me-3">
+                                <i class="bi bi-telephone fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Call Us</h5>
+                                <p class="text-muted mb-0">+1 (555) 123-4567</p>
+                                <p class="text-muted mb-0">Mon - Fri, 9am - 6pm EST</p>
+                            </div>
+                        </div>
+
+                        <hr class="my-4 opacity-25">
+
+                        <h5 class="fw-bold mb-3">Follow Us</h5>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-outline-primary rounded-circle"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="#" class="btn btn-outline-primary rounded-circle"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="btn btn-outline-primary rounded-circle"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="#" class="btn btn-outline-primary rounded-circle"><i
+                                    class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="card destination-card border-0 shadow-sm p-4 h-100">
+                        <h3 class="fw-bold mb-4">Send us a Message</h3>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="john@example.com"
+                                        required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="General Inquiry">
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5"
+                                        placeholder="How can we help you?" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-gradient btn-lg rounded-pill px-5">Send
+                                        Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4 bg-light text-dark">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <a class="d-flex align-items-center mb-3 text-decoration-none text-dark" href="index.html">
+                        <img src="logo.png" alt="Logo" height="40" class="me-2">
+                        <span class="fs-4 fw-bold">Adventure Travel Agency</span>
+                    </a>
+                    <p class="text-muted">Embark on journeys that transform the way you see the world. We craft
+                        unforgettable experiences for the modern explorer.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- ... (Rest of footer same as index) ... -->
+                <div class="col-6 col-lg-2 offset-lg-1">
+                    <h5 class="fw-bold mb-3">Company</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">About Us</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Careers</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Press</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-3">Support</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-decoration-none text-muted hover-primary">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Legal</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Privacy
+                                Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Terms &
+                                Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-3">Get in Touch</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex"><i class="bi bi-geo-alt me-2 text-primary"></i> 123 Adventure Way,
+                            Explorer City, EC 90210</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-envelope me-2 text-primary"></i>
+                            hello@adventuretravel.com</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-telephone me-2 text-primary"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mb-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-muted mb-0">&copy; 2024 Adventure Travel Agency. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-muted mb-0">Designed with <i class="bi bi-heart-fill text-danger mx-1"></i> for
+                        Travellers</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

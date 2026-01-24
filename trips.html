@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips - Adventure Travel Agency</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- 1st Column: Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="Adventure Travel Logo" height="50">
+                <span>Adventure Travel Agency</span>
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Center and Right Content -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+
+                <!-- 2nd Column: Menu (Center) -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="trips.html">Trips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="build-trip.html">Build Trip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- 3rd Column: Actions (Right) -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="login.html" class="btn btn-outline-primary btn-sm rounded-pill login-btn">Login</a>
+                    <a href="signup.html" class="btn btn-primary btn-sm rounded-pill signup-btn">Sign Up</a>
+                    <a href="dashboard.html" class="btn btn-gradient btn-sm rounded-pill px-3">Dashboard</a>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="btn btn-link nav-link p-0 ms-2" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-trips text-center">
+        <div class="container animate-fade-up">
+            <p class="font-handwriting mb-2">Curated Itineraries</p>
+            <h1 class="display-3 mb-4" style="padding-top: 30px;">Upcoming Adventures</h1>
+            <p class="lead opacity-75 mx-auto" style="max-width: 600px;">Join small groups of like-minded travelers on
+                these
+                exclusively curated, once-in-a-lifetime journeys.</p>
+        </div>
+    </header>
+
+    <!-- Trips List -->
+    <section id="trips" class="pb-5">
+        <div class="container pb-5">
+
+            <!-- Trip 1: Iceland -->
+            <div class="row align-items-center mb-5 gx-5 trip-row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="trip-img-wrapper rounded-5 overflow-hidden shadow-lg position-relative">
+                        <img src="trip_iceland.png" class="img-fluid w-100 object-fit-cover" alt="Iceland"
+                            style="height: 450px;">
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-lg-4">
+                        <div class="d-inline-flex gap-2 mb-3">
+                            <span class="badge-modern bg-primary-subtle text-primary">Group Trip</span>
+                            <span class="badge-modern bg-success-subtle text-success">Confirmed</span>
+                        </div>
+                        <h2 class="display-5 fw-bold mb-3">Iceland: Fire & Ice</h2>
+                        <p class="lead text-muted mb-4">Traverse the otherworldly landscapes of the south coast. From
+                            the
+                            black sands of Vík to the crystal caves of Vatnajökull.</p>
+
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <div class="icon-box-modern">
+                                <i class="bi bi-calendar4-week"></i>
+                                <div>
+                                    <small class="d-block text-muted text-uppercase fw-bold"
+                                        style="font-size: 0.7rem;">Date</small>
+                                    <span class="fw-medium">Aug 15 - 22</span>
+                                </div>
+                            </div>
+                            <div class="icon-box-modern">
+                                <i class="bi bi-people"></i>
+                                <div>
+                                    <small class="d-block text-muted text-uppercase fw-bold"
+                                        style="font-size: 0.7rem;">Availability</small>
+                                    <span class="fw-medium">12 Spots</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="d-flex align-items-center justify-content-between mt-5 pt-3 border-top border-light-subtle">
+                            <div>
+                                <small class="text-muted d-block">Starting from</small>
+                                <span class="price-tag-lg">$2,499</span>
+                            </div>
+                            <a href="#" class="btn btn-gradient rounded-pill px-5 py-3 shadow-lg">View Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trip 2: Patagonia -->
+            <div class="row align-items-center mb-5 gx-5 trip-row flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="trip-img-wrapper rounded-5 overflow-hidden shadow-lg position-relative">
+                        <img src="trip_patagonia.png" class="img-fluid w-100 object-fit-cover" alt="Patagonia"
+                            style="height: 450px;">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-lg-4">
+                        <div class="d-inline-flex gap-2 mb-3">
+                            <span class="badge-modern bg-primary-subtle text-primary">Hiking Expedition</span>
+                        </div>
+                        <h2 class="display-5 fw-bold mb-3">Patagonia: World's End</h2>
+                        <p class="lead text-muted mb-4">The ultimate trekking experience. Conquer the famous W Circuit
+                            and
+                            witness the granite towers of Torres del Paine.</p>
+
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <div class="icon-box-modern">
+                                <i class="bi bi-calendar4-week"></i>
+                                <div>
+                                    <small class="d-block text-muted text-uppercase fw-bold"
+                                        style="font-size: 0.7rem;">Date</small>
+                                    <span class="fw-medium">Nov 05 - 15</span>
+                                </div>
+                            </div>
+                            <div class="icon-box-modern">
+                                <i class="bi bi-people"></i>
+                                <div>
+                                    <small class="d-block text-muted text-uppercase fw-bold"
+                                        style="font-size: 0.7rem;">Availability</small>
+                                    <span class="fw-medium">8 Spots</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="d-flex align-items-center justify-content-between mt-5 pt-3 border-top border-light-subtle">
+                            <div>
+                                <small class="text-muted d-block">Starting from</small>
+                                <span class="price-tag-lg">$3,200</span>
+                            </div>
+                            <a href="#" class="btn btn-gradient rounded-pill px-5 py-3 shadow-lg">View Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trip 3: Japan -->
+            <div class="row align-items-center mb-5 gx-5 trip-row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="trip-img-wrapper rounded-5 overflow-hidden shadow-lg position-relative">
+                        <img src="trip_japan.png" class="img-fluid w-100 object-fit-cover" alt="Japan"
+                            style="height: 450px;">
+                        <span
+                            class="badge bg-danger text-white position-absolute top-0 start-0 m-4 py-2 px-3 fw-bold shadow-sm rounded-pill">
+                            Filling Fast
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-lg-4">
+                        <div class="d-inline-flex gap-2 mb-3">
+                            <span class="badge-modern bg-info-subtle text-info-emphasis">Cultural</span>
+                        </div>
+                        <h2 class="display-5 fw-bold mb-3">Japan: Old & New</h2>
+                        <p class="lead text-muted mb-4">A sensory journey through time. From the neon lights of Tokyo's
+                            Shibuya Crossing to the quiet zen gardens of Kyoto.</p>
+
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <div class="icon-box-modern">
+                                <i class="bi bi-calendar4-week"></i>
+                                <div>
+                                    <small class="d-block text-muted text-uppercase fw-bold"
+                                        style="font-size: 0.7rem;">Date</small>
+                                    <span class="fw-medium">Oct 10 - 20</span>
+                                </div>
+                            </div>
+                            <div class="icon-box-modern">
+                                <i class="bi bi-people"></i>
+                                <div>
+                                    <small class="d-block text-muted text-uppercase fw-bold"
+                                        style="font-size: 0.7rem;">Availability</small>
+                                    <span class="fw-medium">4 Spots</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="d-flex align-items-center justify-content-between mt-5 pt-3 border-top border-light-subtle">
+                            <div>
+                                <small class="text-muted d-block">Starting from</small>
+                                <span class="price-tag-lg">$3,800</span>
+                            </div>
+                            <a href="#" class="btn btn-gradient rounded-pill px-5 py-3 shadow-lg">View Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4 bg-light text-dark">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <a class="d-flex align-items-center mb-3 text-decoration-none text-dark" href="index.html">
+                        <img src="logo.png" alt="Logo" height="40" class="me-2">
+                        <span class="fs-4 fw-bold">Adventure Travel Agency</span>
+                    </a>
+                    <p class="text-muted">Embark on journeys that transform the way you see the world. We craft
+                        unforgettable experiences for the modern explorer.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- ... (Rest of footer same as index) ... -->
+                <div class="col-6 col-lg-2 offset-lg-1">
+                    <h5 class="fw-bold mb-3">Company</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">About Us</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Careers</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Press</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-3">Support</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-decoration-none text-muted hover-primary">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Legal</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Privacy
+                                Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Terms &
+                                Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-3">Get in Touch</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex"><i class="bi bi-geo-alt me-2 text-primary"></i> 123 Adventure Way,
+                            Explorer City, EC 90210</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-envelope me-2 text-primary"></i>
+                            hello@adventuretravel.com</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-telephone me-2 text-primary"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mb-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-muted mb-0">&copy; 2024 Adventure Travel Agency. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-muted mb-0">Designed with <i class="bi bi-heart-fill text-danger mx-1"></i> for
+                        Travellers</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
