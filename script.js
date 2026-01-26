@@ -14,17 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
         updateIcon(true);
     }
 
-    themeToggleBtn.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        const isDark = body.classList.contains('dark-mode');
-        
-        // Save preference
-        localStorage.setItem('theme', isDark ? 'dark-mode' : '');
-        
-        updateIcon(isDark);
-    });
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+
+            // Save preference
+            localStorage.setItem('theme', isDark ? 'dark-mode' : '');
+
+            updateIcon(isDark);
+        });
+    }
 
     function updateIcon(isDark) {
+        if (!themeIcon) return;
         if (isDark) {
             themeIcon.classList.remove('bi-moon-stars-fill');
             themeIcon.classList.add('bi-sun-fill');
@@ -41,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollToTopBtn.title = "Go to top";
     document.body.appendChild(scrollToTopBtn);
 
-    window.onscroll = function() {
+    window.onscroll = function () {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             scrollToTopBtn.classList.add("show");
         } else {
@@ -49,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    scrollToTopBtn.addEventListener("click", function() {
+    scrollToTopBtn.addEventListener("click", function () {
         window.scrollTo({
             top: 0,
             behavior: "smooth"

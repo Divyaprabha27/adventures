@@ -60,6 +60,12 @@ body.dark-mode .navbar-brand {
     color: var(--text-dark);
 }
 
+@media (max-width: 432px) {
+    .navbar-brand span {
+        display: none;
+    }
+}
+
 .nav-link {
     font-weight: 500;
     color: var(--text-light);
@@ -235,9 +241,8 @@ body.dark-mode #theme-toggle {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2021&q=80');
     background-size: cover;
     background-position: center;
-    margin-top: -76px;
-    /* Pull behind navbar */
-    padding-top: 76px;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /* Destination Cards */
@@ -483,8 +488,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-position: center;
     padding: 8rem 0 6rem;
     color: white;
-    margin-top: -76px;
-    /* Behind navbar */
+    margin-top: 0;
     margin-bottom: 4rem;
 }
 
@@ -608,7 +612,7 @@ body.dark-mode .text-muted {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    z-index: 99;
+    z-index: 1000;
     font-size: 1.5rem;
     border: none;
     outline: none;
@@ -641,16 +645,30 @@ body.dark-mode #scrollToTopBtn {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 767px) {
+    #sidebarMenu {
+        display: block !important;
+        position: relative !important;
+        height: auto !important;
+        min-height: auto !important;
+        width: 100% !important;
+        margin-bottom: 2rem;
+        background-color: var(--light-bg);
+        border-bottom: 1px solid var(--glass-border-light);
+    }
+}
+
 /* --- Home 2 Specific Styles --- */
 
 /* Home 2 Hero */
 .home2-hero {
-    height: 90vh;
+    min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
-    margin-top: -76px;
+    margin-top: 0;
     padding-top: 150px;
+    padding-bottom: 50px;
     position: relative;
 }
 
@@ -734,15 +752,43 @@ body.dark-mode .testimonial-card {
 
 /* Destinations Page Hero */
 .destinations-hero {
-    height: 60vh;
+    min-height: 60vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
-    margin-top: -76px;
-    padding-top: 76px;
+    margin-top: 0;
+    padding-top: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+}
+
+/* About Page Hero */
+.about-hero {
+    min-height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    margin-top: 0;
+    padding-top: 120px;
+    color: white;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.dark-mode .card-hover:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
 }

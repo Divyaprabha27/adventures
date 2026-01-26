@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Adventure Travel Agency</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- 1st Column: Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="Adventure Travel Logo" height="50">
+                <span>Adventure Travel Agency</span>
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Center and Right Content -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+
+                <!-- 2nd Column: Menu (Center) -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button"
+                            aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trips.html">Trips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="build-trip.html">Build Trip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- 3rd Column: Actions (Right) -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="login.html" class="btn btn-outline-primary btn-sm rounded-pill login-btn">Login</a>
+                    <a href="signup.html" class="btn btn-primary btn-sm rounded-pill signup-btn">Sign Up</a>
+                    <a href="dashboard.html" class="btn btn-gradient btn-sm rounded-pill px-3">Dashboard</a>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="btn btn-link nav-link p-0 ms-2" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero d-flex align-items-center justify-content-center text-center text-white">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Our Story</h1>
+            <p class="lead mb-0">Crafting unforgettable journeys for the modern explorer.</p>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+                        class="img-fluid rounded-4 shadow-lg" alt="Team working">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4 display-6">We Believe in the Power of Travel</h2>
+                    <p class="text-muted mb-4 lead">Adventure Travel Agency was born from a simple idea: that travel
+                        should be transformative, not just a vacation.</p>
+                    <p class="text-muted mb-4">Since 2010, we have been curating exceptional experiences that connect
+                        travelers with the authentic soul of a destination. From the peaks of Patagonia to the temples
+                        of Kyoto, our mission is to open the world to you in ways you never imagined.</p>
+                    <div class="row g-4 mt-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="feature-icon bg-primary bg-opacity-10 text-primary rounded-circle me-3"
+                                    style="width: 48px; height: 48px;">
+                                    <i class="bi bi-globe-americas fs-5"></i>
+                                </div>
+                                <h6 class="mb-0 fw-bold">Global Reach</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="feature-icon bg-primary bg-opacity-10 text-primary rounded-circle me-3"
+                                    style="width: 48px; height: 48px;">
+                                    <i class="bi bi-heart-fill fs-5"></i>
+                                </div>
+                                <h6 class="mb-0 fw-bold">Passion Driven</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="feature-icon bg-primary bg-opacity-10 text-primary rounded-circle me-3"
+                                    style="width: 48px; height: 48px;">
+                                    <i class="bi bi-shield-check fs-5"></i>
+                                </div>
+                                <h6 class="mb-0 fw-bold">Safe Travels</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="feature-icon bg-primary bg-opacity-10 text-primary rounded-circle me-3"
+                                    style="width: 48px; height: 48px;">
+                                    <i class="bi bi-people-fill fs-5"></i>
+                                </div>
+                                <h6 class="mb-0 fw-bold">Local Guides</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-light-subtle">
+        <div class="container py-5">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <h2 class="display-4 fw-bold text-primary">10k+</h2>
+                    <p class="text-muted fw-semibold">Happy Travelers</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="display-4 fw-bold text-primary">50+</h2>
+                    <p class="text-muted fw-semibold">Destinations</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="display-4 fw-bold text-primary">15</h2>
+                    <p class="text-muted fw-semibold">Years Experience</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="display-4 fw-bold text-primary">4.9</h2>
+                    <p class="text-muted fw-semibold">Average Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h5 class="text-primary fw-bold text-uppercase letter-spacing-2">The Team</h5>
+                <h2 class="fw-bold display-6">Meet the Explorers</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Our team is made up of passionate travelers,
+                    expert guides, and logistics wizards dedicating to making your trip perfect.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Team Member 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4 card-hover">
+                        <div class="mb-3 position-relative d-inline-block mx-auto">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                class="rounded-circle object-fit-cover shadow-sm" alt="Sarah Johnson" width="120"
+                                height="120">
+                            <div class="position-absolute bottom-0 end-0 bg-white rounded-circle p-1 shadow-sm">
+                                <i class="bi bi-linkedin text-primary"></i>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold mb-1">Sarah Johnson</h5>
+                        <p class="text-primary small mb-3">Founder & CEO</p>
+                        <p class="text-muted small">Avid mountaineer with a passion for sustainable tourism and coffee.
+                        </p>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4 card-hover">
+                        <div class="mb-3 position-relative d-inline-block mx-auto">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                class="rounded-circle object-fit-cover shadow-sm" alt="David Chen" width="120"
+                                height="120">
+                            <div class="position-absolute bottom-0 end-0 bg-white rounded-circle p-1 shadow-sm">
+                                <i class="bi bi-linkedin text-primary"></i>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold mb-1">David Chen</h5>
+                        <p class="text-primary small mb-3">Head of Operations</p>
+                        <p class="text-muted small">Logistics guru who ensures every transfer and booking is seamless.
+                        </p>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4 card-hover">
+                        <div class="mb-3 position-relative d-inline-block mx-auto">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                class="rounded-circle object-fit-cover shadow-sm" alt="Emily Rodriguez" width="120"
+                                height="120">
+                            <div class="position-absolute bottom-0 end-0 bg-white rounded-circle p-1 shadow-sm">
+                                <i class="bi bi-linkedin text-primary"></i>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold mb-1">Emily Rodriguez</h5>
+                        <p class="text-primary small mb-3">Lead Guide</p>
+                        <p class="text-muted small">Historian and nature lover who brings every destination to life.</p>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4 card-hover">
+                        <div class="mb-3 position-relative d-inline-block mx-auto">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                class="rounded-circle object-fit-cover shadow-sm" alt="Michael Brown" width="120"
+                                height="120">
+                            <div class="position-absolute bottom-0 end-0 bg-white rounded-circle p-1 shadow-sm">
+                                <i class="bi bi-linkedin text-primary"></i>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold mb-1">Michael Brown</h5>
+                        <p class="text-primary small mb-3">Travel Consultant</p>
+                        <p class="text-muted small">Expert in crafting custom itineraries for the pickiest travelers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-gradient text-white position-relative overflow-hidden"
+        style="background-color: var(--primary-color);">
+        <div class="container position-relative z-1 text-center py-4">
+            <h2 class="fw-bold mb-3">Ready to Start Your Adventure?</h2>
+            <p class="lead mb-4">Join over 10,000 satisfied travelers and discover the world with us.</p>
+            <a href="signup.html" class="btn btn-light rounded-pill px-5 fw-bold text-primary">Get Started</a>
+        </div>
+        <!-- Decorative shapes -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10"
+            style="background: radial-gradient(circle at 10% 20%, white 0%, transparent 20%), radial-gradient(circle at 90% 80%, white 0%, transparent 20%);">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4 bg-light text-dark">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <a class="d-flex align-items-center mb-3 text-decoration-none text-dark" href="index.html">
+                        <img src="logo.png" alt="Logo" height="40" class="me-2">
+                        <span class="fs-4 fw-bold">Adventure Travel Agency</span>
+                    </a>
+                    <p class="text-muted">Embark on journeys that transform the way you see the world. We craft
+                        unforgettable experiences for the modern explorer.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1">
+                    <h5 class="fw-bold mb-3">Company</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><a href="about.html"
+                                class="text-decoration-none text-muted hover-primary">About Us</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Careers</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Press</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-3">Support</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-decoration-none text-muted hover-primary">Contact</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Legal</a>
+                        </li>
+                        <li class="mb-2"><a href="#"
+                                class="text-decoration-none text-muted hover-primary">PrivacyPolicy</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Terms &
+                                Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-3">Get in Touch</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex"><i class="bi bi-geo-alt me-2 text-primary"></i> 123 Adventure Way,
+                            Explorer City, EC 90210</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-envelope me-2 text-primary"></i>
+                            hello@adventuretravel.com</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-telephone me-2 text-primary"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mb-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-muted mb-0">&copy; 2024 Adventure Travel Agency. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-muted mb-0">Designed with <i class="bi bi-heart-fill text-danger mx-1"></i> for
+                        Travellers</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
