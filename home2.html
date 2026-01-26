@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Travel Agency</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- 1st Column: Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Adventure Travel Logo" height="50">
+                <span>Adventure Travel Agency</span>
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Center and Right Content -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+
+                <!-- 2nd Column: Menu (Center) -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="index.html" id="homeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trips.html">Trips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="build-trip.html">Build Trip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- 3rd Column: Actions (Right) -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="login.html" class="btn btn-outline-primary btn-sm rounded-pill login-btn">Login</a>
+                    <a href="signup.html" class="btn btn-primary btn-sm rounded-pill signup-btn">Sign Up</a>
+                    <a href="dashboard.html" class="btn btn-gradient btn-sm rounded-pill px-3">Dashboard</a>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="btn btn-link nav-link p-0 ms-2" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home 2 Hero Section -->
+    <section class="home2-hero d-flex align-items-center text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="badge bg-white text-primary px-3 py-2 rounded-pill mb-3 fw-bold">Discover the
+                        World</span>
+                    <h1 class="display-2 fw-bold mb-4">Travel Beyond <br><span class="text-primary">Boundaries</span>
+                    </h1>
+                    <p class="lead mb-5 pe-lg-5">Uncover hidden gems and immerse yourself in local cultures. Your next
+                        great story awaits.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#destinations" class="btn btn-gradient btn-lg rounded-pill px-5">Explore Now</a>
+                        <a href="#" class="btn btn-outline-light btn-lg rounded-pill px-5"><i
+                                class="bi bi-play-circle me-2"></i> Watch Video</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-5 mt-lg-0">
+                    <div class="glass-search-card text-white">
+                        <h4 class="fw-bold mb-4">Find Your Adventure</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Destination</label>
+                                <select class="form-select border-0">
+                                    <option selected>Where to?</option>
+                                    <option value="1">Europe</option>
+                                    <option value="2">Asia</option>
+                                    <option value="3">South America</option>
+                                </select>
+                            </div>
+                            <div class="row g-2 mb-4">
+                                <div class="col-6">
+                                    <label class="form-label">Date</label>
+                                    <input type="date" class="form-control border-0">
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label">Type</label>
+                                    <select class="form-select border-0">
+                                        <option selected>All</option>
+                                        <option value="1">Trekking</option>
+                                        <option value="2">Relaxation</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-3 rounded-3 fw-bold">Search
+                                Trips</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home 2 Destinations (Featured Layout) -->
+    <section id="destinations" class="py-5">
+        <div class="container py-5">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h6 class="text-uppercase text-primary fw-bold tracking-wider">Top Picks</h6>
+                    <h2 class="display-5 fw-bold">Featured Destinations</h2>
+                </div>
+                <a href="destinations.html" class="btn btn-outline-primary rounded-pill">View All</a>
+            </div>
+
+            <div class="row g-4">
+                <!-- Large Featured Card -->
+                <div class="col-lg-6">
+                    <div class="card destination-card h-100 border-0 shadow-sm overflow-hidden"
+                        style="min-height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+                            class="card-img-top h-100 w-100 object-fit-cover" alt="Paris">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end p-4 text-white"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                            <span class="badge bg-primary mb-2 align-self-start">Trending</span>
+                            <h3 class="fw-bold">Paris, France</h3>
+                            <p class="mb-0 text-white-50">Experience the city of lights like never before.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fs-4 fw-bold">$1,499</span>
+                                <a href="#" class="btn btn-light rounded-circle btn-sm p-2"><i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Smaller Grid Cards -->
+                <div class="col-lg-6">
+                    <div class="row g-4 h-100">
+                        <div class="col-md-6">
+                            <div class="card destination-card h-100 border-0 shadow-sm overflow-hidden">
+                                <div class="card-img-wrapper" style="height: 200px;">
+                                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        class="card-img-top" alt="Venice">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Venice, Italy</h5>
+                                    <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i> 4.9</div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold text-primary">$950</span>
+                                        <small class="text-muted">4 Days</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card destination-card h-100 border-0 shadow-sm overflow-hidden">
+                                <div class="card-img-wrapper" style="height: 200px;">
+                                    <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        class="card-img-top" alt="Bali">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Bali, Indonesia</h5>
+                                    <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i> 4.8</div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold text-primary">$899</span>
+                                        <small class="text-muted">7 Days</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div
+                                class="card destination-card h-100 border-0 shadow-sm overflow-hidden bg-primary text-white d-flex align-items-center justify-content-center p-4">
+                                <div class="text-center">
+                                    <h4 class="fw-bold mb-3">Explore 50+ More Destinations</h4>
+                                    <a href="destinations.html"
+                                        class="btn btn-light rounded-pill px-4 text-primary fw-bold">View Full
+                                        Catalog</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home 2 Features (Centered Icons) -->
+    <section class="py-5 bg-light-subtle">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-uppercase text-primary fw-bold tracking-wider">Why Travel With Us</h6>
+                <h2 class="display-5 fw-bold">Your Journey, Simplified</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card-2 h-100">
+                        <div class="feature-icon-2">
+                            <i class="bi bi-globe-americas"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Global Access</h4>
+                        <p class="text-muted">Access to over 100+ countries with exclusive local partnerships.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card-2 h-100">
+                        <div class="feature-icon-2">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">24/7 Support</h4>
+                        <p class="text-muted">Our dedicated team is always just a call or message away.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card-2 h-100">
+                        <div class="feature-icon-2">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">100% Secure</h4>
+                        <p class="text-muted">Your payments and personal data are protected by top-tier security.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-8">
+                    <h2 class="display-5 fw-bold">What Travelers Say</h2>
+                    <p class="lead text-muted">Real stories from our community of explorers.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <div class="d-flex justify-content-md-end gap-2">
+                        <button class="btn btn-outline-primary rounded-circle"><i class="bi bi-arrow-left"></i></button>
+                        <button class="btn btn-outline-primary rounded-circle"><i
+                                class="bi bi-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card h-100">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                class="testimonial-avatar">
+                            <div>
+                                <h5 class="fw-bold mb-0">Sarah Jenkins</h5>
+                                <div class="text-warning small">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted mb-0">"The Swiss Alps trek was a life-changing experience. The guides were
+                            professional and the views were unmatched!"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card h-100">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User"
+                                class="testimonial-avatar">
+                            <div>
+                                <h5 class="fw-bold mb-0">David Chen</h5>
+                                <div class="text-warning small">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted mb-0">"Booking our honeymoon to the Maldives was seamless. Everything was
+                            taken care of perfectly."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card h-100">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User"
+                                class="testimonial-avatar">
+                            <div>
+                                <h5 class="fw-bold mb-0">Elena Rodriguez</h5>
+                                <div class="text-warning small">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted mb-0">"The Amazon tour was wild! I felt safe the entire time despite being
+                            in the middle of the jungle."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-dark text-white position-relative overflow-hidden">
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25"
+            style="background: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;">
+        </div>
+        <div class="container py-5 position-relative z-1 text-center">
+            <h2 class="display-5 fw-bold mb-3">Subscribe to Our Newsletter</h2>
+            <p class="lead mb-4 text-white-50">Get the latest travel updates, special offers, and inspiration delivered
+                to your inbox.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control rounded-pill py-3 px-4 border-0"
+                            placeholder="Your email address" aria-label="Your email address">
+                        <button class="btn btn-primary rounded-pill px-4" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4 bg-light text-dark">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <a class="d-flex align-items-center mb-3 text-decoration-none text-dark" href="#">
+                        <img src="logo.png" alt="Logo" height="40" class="me-2">
+                        <span class="fs-4 fw-bold">Adventure Travel Agency</span>
+                    </a>
+                    <p class="text-muted">Embark on journeys that transform the way you see the world. We craft
+                        unforgettable experiences for the modern explorer.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1">
+                    <h5 class="fw-bold mb-3">Company</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">About Us</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Careers</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Press</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-3">Support</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Contact</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Legal</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Privacy
+                                Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted hover-primary">Terms &
+                                Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-3">Get in Touch</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex"><i class="bi bi-geo-alt me-2 text-primary"></i> 123 Adventure Way,
+                            Explorer City, EC 90210</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-envelope me-2 text-primary"></i>
+                            hello@adventuretravel.com</li>
+                        <li class="mb-3 d-flex"><i class="bi bi-telephone me-2 text-primary"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mb-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-muted mb-0">&copy; 2024 Adventure Travel Agency. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-muted mb-0">Designed with <i class="bi bi-heart-fill text-danger mx-1"></i> for
+                        Travellers</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

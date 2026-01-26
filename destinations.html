@@ -38,8 +38,14 @@
 
                 <!-- 2nd Column: Menu (Center) -->
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button"
+                            aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="destinations.html">Destinations</a>
@@ -70,18 +76,17 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <div class="container mt-5 pt-5 pb-3">
-        <div class="text-center mt-5">
-            <h6 class="text-uppercase text-primary fw-bold tracking-wider">Unforgettable Journeys</h6>
-            <h1 class="display-4 fw-bold">All Destinations</h1>
-            <p class="lead text-muted">Choose from our wide range of curated adventures across the globe.</p>
+    <!-- Destinations Hero -->
+    <section class="destinations-hero">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Wanderlust Awaits</h1>
+            <p class="lead mb-0">Discover your next unforgettable adventure from our curated list of destinations.</p>
         </div>
-    </div>
+    </section>
 
     <!-- Destinations Grid -->
-    <section id="destinations" class="pb-5">
-        <div class="container pb-5">
+    <section id="destinations" class="py-5">
+        <div class="container py-5">
             <div class="row g-4">
                 <!-- Card 1 -->
                 <div class="col-md-4">
