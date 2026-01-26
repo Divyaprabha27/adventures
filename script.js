@@ -8,10 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentTheme) {
         body.classList.add(currentTheme);
         updateIcon(currentTheme === 'dark-mode');
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // Fallback to system preference
-        body.classList.add('dark-mode');
-        updateIcon(true);
     }
 
     if (themeToggleBtn) {
