@@ -14,32 +14,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .dashboard-card {
-            transition: transform 0.2s;
-        }
 
-        .dashboard-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .sidebar .nav-link {
-            color: var(--text-light);
-            border-radius: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .sidebar .nav-link:hover,
-        .sidebar .nav-link.active {
-            background-color: var(--primary-light);
-            /* Assuming this var exists or fallback */
-            background-color: rgba(13, 110, 253, 0.1);
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-    </style>
-</head>
 
 <body>
 
@@ -51,12 +26,7 @@
                 <span>Adventure Travel Agency</span>
             </a>
 
-            <!-- Sidebar Toggle (Mobile) -->
-            <button class="navbar-toggler d-md-none collapsed border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i class="bi bi-list fs-4"></i>
-            </button>
+
 
 
 
@@ -70,7 +40,8 @@
                             alt="mdo" width="32" height="32" class="rounded-circle me-2">
                         <strong>John Doe</strong>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="dropdownUser1">
+                    <ul class="dashboard-dropdown dropdown-menu dropdown-menu-end text-small shadow"
+                        aria-labelledby="dropdownUser1">
                         <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li>
