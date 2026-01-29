@@ -68,9 +68,29 @@ body.dark-mode .navbar-brand {
     color: var(--text-dark);
 }
 
+/* Force hamburger menu between 992px and 1020px */
+@media (min-width: 1020px) and (max-width: 1020px) {
+
+    /* Show the toggler again in this range */
+    .navbar-expand-lg .navbar-toggler {
+        display: block;
+    }
+
+    /* Keep the menu collapsed by default */
+    .navbar-expand-lg .navbar-collapse {
+        display: none !important;
+    }
+
+    /* When Bootstrap adds .show, display the menu */
+    .navbar-expand-lg .navbar-collapse.show {
+        display: block !important;
+    }
+}
+
 @media (max-width: 432px) {
     .navbar-brand span {
-        display: none;
+        display: block;
+        font-size: 1rem;
     }
 }
 
