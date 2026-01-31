@@ -71,25 +71,25 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
+                            <a class="nav-link active" href="#" data-page="overview">
                                 <i class="bi bi-speedometer2 me-2"></i>
                                 Overview
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="#" data-page="my-trips">
                                 <i class="bi bi-airplane me-2"></i>
                                 My Trips
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="#" data-page="saved-destinations">
                                 <i class="bi bi-heart me-2"></i>
                                 Saved Destinations
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="#" data-page="settings">
                                 <i class="bi bi-gear me-2"></i>
                                 Settings
                             </a>
@@ -116,102 +116,54 @@
 
             <!-- Main Content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
-                <div
-                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Dashboard</h1>
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="btn-group me-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                <div id="content-area">
+                    <!-- Overview Content -->
+                    <div id="overview" class="content-section">
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                            <h1 class="h2">Dashboard</h1>
+                            <div class="btn-toolbar mb-2 mb-md-0">
+                                <div class="btn-group me-2">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                                    <i class="bi bi-calendar3"></i>
+                                    This week
+                                </button>
+                            </div>
                         </div>
-                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                            <i class="bi bi-calendar3"></i>
-                            This week
-                        </button>
-                    </div>
-                </div>
 
-                <!-- Stats Cards -->
-                <div class="row g-4 mb-4">
-                    <div class="col-md-4">
-                        <div class="card dashboard-card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="text-muted text-uppercase small fw-bold">Total Trips</h6>
-                                <h2 class="display-6 fw-bold text-primary mb-0">12</h2>
+                        <!-- Stats Cards -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-4">
+                                <div class="card dashboard-card border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h6 class="text-muted text-uppercase small fw-bold">Total Trips</h6>
+                                        <h2 class="display-6 fw-bold text-primary mb-0">12</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card dashboard-card border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h6 class="text-muted text-uppercase small fw-bold">Countries Visited</h6>
+                                        <h2 class="display-6 fw-bold text-success mb-0">8</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card dashboard-card border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h6 class="text-muted text-uppercase small fw-bold">Reward Points</h6>
+                                        <h2 class="display-6 fw-bold text-warning mb-0">2,450</h2>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card dashboard-card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="text-muted text-uppercase small fw-bold">Countries Visited</h6>
-                                <h2 class="display-6 fw-bold text-success mb-0">8</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card dashboard-card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="text-muted text-uppercase small fw-bold">Reward Points</h6>
-                                <h2 class="display-6 fw-bold text-warning mb-0">2,450</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Recent Activity / Upcoming -->
-                <h4 class="mb-3">Upcoming Adventures</h4>
-                <div class="card border-0 shadow-sm mb-4">
-                    <div class="card-body p-0">
-                        <div class="table-responsive">
-                            <table class="table table-hover mb-0 align-middle">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th scope="col" class="ps-4">Trip</th>
-                                        <th scope="col">Destination</th>
-                                        <th scope="col">Date</th>
-                                        <th scope="col">Status</th>
-                                        <th scope="col" class="text-end pe-4">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="ps-4 fw-bold">Kyoto Cherry Blossoms</td>
-                                        <td>Japan</td>
-                                        <td>Apr 10, 2024</td>
-                                        <td><span class="badge bg-success rounded-pill">Confirmed</span></td>
-                                        <td class="text-end pe-4"><button
-                                                class="btn btn-sm btn-outline-primary">View</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ps-4 fw-bold">Patagonia Trek</td>
-                                        <td>Chile</td>
-                                        <td>Nov 15, 2024</td>
-                                        <td><span class="badge bg-warning text-dark rounded-pill">Pending</span></td>
-                                        <td class="text-end pe-4"><button
-                                                class="btn btn-sm btn-outline-primary">View</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ps-4 fw-bold">Swiss Alps Skiing</td>
-                                        <td>Switzerland</td>
-                                        <td>Dec 20, 2024</td>
-                                        <td><span class="badge bg-secondary rounded-pill">Draft</span></td>
-                                        <td class="text-end pe-4"><button
-                                                class="btn btn-sm btn-outline-primary">Edit</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recent Notifications & Travel Tips -->
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-header bg-white border-0 py-3">
-                                <h5 class="mb-0 fw-bold">Recent Notifications</h5>
-                            </div>
+                        <!-- Recent Activity / Upcoming -->
+                        <h4 class="mb-3">Upcoming Adventures</h4>
+                        <div class="card border-0 shadow-sm mb-4">
                             <div class="card-body p-0">
                                 <div class="list-group list-group-flush">
                                     <a href="#" class="list-group-item list-group-item-action py-3">
@@ -269,8 +221,214 @@
                                         <p class="small text-muted mb-1">A wild adventure deep into the rainforest.</p>
                                         <span class="badge bg-success-subtle text-success">Adventure</span>
                                     </div>
-                                    <a href="#" class="btn btn-sm btn-outline-primary ms-auto"><i
-                                            class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Trip" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Tokyo Experience</h5>
+                                        <p class="text-muted small mb-2">Japan • 10 Days</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-primary fw-bold">$3,199</span>
+                                            <span class="badge bg-secondary rounded-pill">Draft</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Trip" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Paris Romance</h5>
+                                        <p class="text-muted small mb-2">France • 5 Days</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-primary fw-bold">$1,899</span>
+                                            <span class="badge bg-success rounded-pill">Confirmed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Saved Destinations Content -->
+                    <div id="saved-destinations" class="content-section" style="display: none;">
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                            <h1 class="h2">Saved Destinations</h1>
+                            <span class="badge bg-primary rounded-pill">24 Saved</span>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Santorini</h5>
+                                        <p class="text-muted small mb-2">Greece</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-primary fw-bold">$899</span>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-heart-fill"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Maldives</h5>
+                                        <p class="text-muted small mb-2">Maldives</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-primary fw-bold">$1,599</span>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-heart-fill"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Dubai</h5>
+                                        <p class="text-muted small mb-2">UAE</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-primary fw-bold">$1,199</span>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-heart-fill"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Iceland</h5>
+                                        <p class="text-muted small mb-2">Iceland</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-primary fw-bold">$2,299</span>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-heart-fill"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Norway Fjords</h5>
+                                        <p class="text-muted small mb-2">Norway</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-primary fw-bold">$1,799</span>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-heart-fill"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold">Machu Picchu</h5>
+                                        <p class="text-muted small mb-2">Peru</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-primary fw-bold">$1,499</span>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-heart-fill"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Content -->
+                    <div id="settings" class="content-section" style="display: none;">
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                            <h1 class="h2">Settings</h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="card border-0 shadow-sm mb-4">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold mb-4">Profile Information</h5>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label class="form-label">Full Name</label>
+                                                <input type="text" class="form-control" value="John Doe">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Email</label>
+                                                <input type="email" class="form-control" value="john.doe@example.com">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Phone</label>
+                                                <input type="tel" class="form-control" value="+1 234 567 8900">
+                                            </div>
+                                            <button type="submit" class="btn btn-gradient rounded-pill">Save Changes</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="card border-0 shadow-sm mb-4">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold mb-4">Security</h5>
+                                        <div class="mb-3">
+                                            <label class="form-label">Current Password</label>
+                                            <input type="password" class="form-control" placeholder="Enter current password">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">New Password</label>
+                                            <input type="password" class="form-control" placeholder="Enter new password">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Confirm New Password</label>
+                                            <input type="password" class="form-control" placeholder="Confirm new password">
+                                        </div>
+                                        <button type="submit" class="btn btn-gradient rounded-pill">Update Password</button>
+                                    </div>
+                                </div>
+
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold mb-4">Preferences</h5>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                                            <label class="form-check-label" for="emailNotifications">
+                                                Email Notifications
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="smsNotifications">
+                                            <label class="form-check-label" for="smsNotifications">
+                                                SMS Notifications
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                                            <label class="form-check-label" for="newsletter">
+                                                Newsletter Subscription
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="darkMode">
+                                            <label class="form-check-label" for="darkMode">
+                                                Dark Mode
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -285,6 +443,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
+    
+    <!-- Dashboard Navigation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all sidebar navigation links
+            const navLinks = document.querySelectorAll('.sidebar .nav-link[data-page]');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            // Add click event listeners to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Get the target page
+                    const targetPage = this.getAttribute('data-page');
+                    
+                    // Hide all content sections
+                    contentSections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    
+                    // Show the target content section
+                    const targetSection = document.getElementById(targetPage);
+                    if (targetSection) {
+                        targetSection.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
