@@ -1,36 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
+    const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+    // We might have multiple icons if we have multiple buttons, so we should target them relative to the button or via a common class
+    // actually, let's select all icons that should change
+    const themeIcons = document.querySelectorAll('.theme-icon-active');
     const body = document.body;
 
     // Check local storage for preference
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme) {
         body.classList.add(currentTheme);
-        updateIcon(currentTheme === 'dark-mode');
+        updateIcons(currentTheme === 'dark-mode');
     }
 
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            const isDark = body.classList.contains('dark-mode');
+    if (themeToggleBtns) {
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                const isDark = body.classList.contains('dark-mode');
 
-            // Save preference
-            localStorage.setItem('theme', isDark ? 'dark-mode' : '');
+                // Save preference
+                localStorage.setItem('theme', isDark ? 'dark-mode' : '');
 
-            updateIcon(isDark);
+                updateIcons(isDark);
+            });
         });
     }
 
-    function updateIcon(isDark) {
-        if (!themeIcon) return;
-        if (isDark) {
-            themeIcon.classList.remove('bi-moon-stars-fill');
-            themeIcon.classList.add('bi-sun-fill');
-        } else {
-            themeIcon.classList.remove('bi-sun-fill');
-            themeIcon.classList.add('bi-moon-stars-fill');
+    // Mobile Menu Close Button
+    const navbarCollapse = document.getElementById('navbarContent');
+
+    // Use event delegation to handle potential multiple close buttons or dynamic insertion
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('.mobile-nav-close')) {
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                // Check if Bootstrap 5 is available
+                if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+                    bsCollapse.hide();
+                } else {
+                    // Fallback
+                    navbarCollapse.classList.remove('show');
+                }
+            }
         }
+    });
+
+    // Prevent body scroll when menu is open
+    if (navbarCollapse) {
+        navbarCollapse.addEventListener('show.bs.collapse', () => {
+            document.body.style.overflow = 'hidden';
+        });
+        navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+            document.body.style.overflow = '';
+        });
+    }
+
+    function updateIcons(isDark) {
+        themeIcons.forEach(icon => {
+            if (isDark) {
+                icon.classList.remove('bi-moon-stars-fill');
+                icon.classList.add('bi-sun-fill');
+            } else {
+                icon.classList.remove('bi-sun-fill');
+                icon.classList.add('bi-moon-stars-fill');
+            }
+        });
     }
 
     // Scroll to Top Button Logic

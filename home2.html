@@ -27,19 +27,36 @@
                 <span>Adventure Travel Agency</span>
             </a>
 
-            <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <!-- Mobile Mode Toggle & Hamburger -->
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-link nav-link p-0 theme-toggle-btn d-lg-none" aria-label="Toggle Dark Mode">
+                    <i class="bi bi-moon-stars-fill theme-icon-active"></i>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
             <!-- Center and Right Content -->
             <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+                <button type="button" class="mobile-nav-close d-lg-none" aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                </button>
 
                 <!-- 2nd Column: Menu (Center) -->
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="index.html" id="homeDropdown" role="button"
+                    <!-- Mobile Home Links -->
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="index.html">Home 1</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link active" href="home2.html">Home 2</a>
+                    </li>
+
+                    <!-- Desktop Home Dropdown -->
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Home
                         </a>
@@ -67,13 +84,13 @@
 
                 <!-- 3rd Column: Actions (Right) -->
                 <div class="d-flex align-items-center gap-3">
-                    <a href="login.html" class="btn btn-outline-primary btn-sm rounded-pill login-btn">Login</a>
                     <a href="signup.html" class="btn btn-primary btn-sm rounded-pill signup-btn">Sign Up</a>
                     <a href="dashboard.html" class="btn btn-gradient btn-sm rounded-pill px-3">Dashboard</a>
 
-                    <!-- Theme Toggle -->
-                    <button id="theme-toggle" class="btn btn-link nav-link p-0 ms-2" aria-label="Toggle Dark Mode">
-                        <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                    <!-- Theme Toggle (Desktop) -->
+                    <button class="btn btn-link nav-link p-0 ms-2 theme-toggle-btn d-none d-lg-block"
+                        aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-stars-fill theme-icon-active"></i>
                     </button>
                 </div>
             </div>

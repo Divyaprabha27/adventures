@@ -108,6 +108,11 @@ body.dark-mode .navbar-brand {
         padding: 0.25rem 0.5rem;
         font-size: 0.8rem;
     }
+
+    /* Set navbar brand span font size to 1rem for 1136px view */
+    .navbar-brand span {
+        font-size: 1rem !important;
+    }
 }
 
 .nav-link {
@@ -188,6 +193,93 @@ body.dark-mode .nav-link.active {
     .dropdown-menu {
         position: absolute;
         z-index: 1050;
+    }
+
+    .navbar-collapse .d-flex {
+        display: block !important;
+        text-align: center;
+    }
+
+    /* Mobile Menu Close Button */
+    /* .navbar-collapse rule removed to avoid empty rule lint */
+
+    .navbar-collapse.show,
+    .navbar-collapse.collapsing {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--card-bg-light);
+        z-index: 1050;
+        padding: 5rem 2rem 2rem;
+        /* Extra top padding for close button */
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        transition: height 0.35s ease;
+        /* Ensure transition exists */
+    }
+
+    /* Override Bootstrap's collapsing height behavior if needed, 
+       but usually we want the fade/slide. 
+       Since we are full screen, height animation from 0 to 100vh might look weird.
+       Let's try to add a fade in effect.
+    */
+    .navbar-collapse.collapsing {
+        height: 100vh !important;
+        /* Force full height during transition */
+        opacity: 0;
+        transition: opacity 0.35s ease;
+    }
+
+    .navbar-collapse.show {
+        opacity: 1;
+    }
+
+    body.dark-mode .navbar-collapse.show,
+    body.dark-mode .navbar-collapse.collapsing {
+        background-color: var(--card-bg-dark);
+    }
+
+    .mobile-nav-close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        z-index: 1051;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        /* Larger close button */
+        color: var(--text-light);
+        transition: color 0.3s ease;
+    }
+
+    body.dark-mode .mobile-nav-close {
+        color: var(--text-dark);
+    }
+
+    .mobile-nav-close:hover {
+        color: var(--primary-color);
+        transform: rotate(90deg);
+        /* Nice effect */
+    }
+
+    /* Center nav items in mobile view */
+    .navbar-collapse.show .navbar-nav,
+    .navbar-collapse.collapsing .navbar-nav {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .navbar-collapse.show .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+
+    .navbar-collapse.show .navbar-nav .nav-link {
+        font-size: 1.25rem;
     }
 }
 
@@ -701,18 +793,7 @@ body.dark-mode #scrollToTopBtn {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 767px) {
-    #sidebarMenu {
-        display: block !important;
-        position: relative !important;
-        height: auto !important;
-        min-height: auto !important;
-        width: 100% !important;
-        margin-bottom: 2rem;
-        background-color: var(--light-bg);
-        border-bottom: 1px solid var(--glass-border-light);
-    }
-}
+
 
 /* --- Home 2 Specific Styles --- */
 
@@ -734,17 +815,17 @@ body.dark-mode #scrollToTopBtn {
         justify-content: center;
         text-align: center;
     }
-    
+
     .home2-hero .col-lg-7,
     .home2-hero .col-lg-5 {
         max-width: 600px;
         margin: 0 auto;
     }
-    
+
     .home2-hero .d-flex.flex-wrap {
         justify-content: center;
     }
-    
+
     .home2-hero .glass-search-card {
         margin-top: 2rem;
         max-width: 400px;
@@ -983,4 +1064,153 @@ body.dark-mode .card-header {
 
 body.dark-mode .card-header h5 {
     color: var(--text-dark);
+}
+
+:root {
+    --sidebar-width: 260px;
+    --navbar-height: 70px;
+}
+
+/* Show hamburger menu at 1024px and below */
+@media (max-width: 1024px) {
+    .navbar-toggler {
+        display: block !important;
+    }
+
+    /* Hide desktop user dropdown at 1024px and below */
+    .dropdown.d-none.d-lg-block {
+        display: none !important;
+    }
+}
+
+
+/* Mobile & tablet sidebar width - 1024px and below */
+@media (max-width: 1024px) {
+
+    #sidebarMenu {
+        width: 260px;
+        position: fixed;
+    }
+
+    main {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 1rem !important;
+    }
+
+    .dashboard-card {
+        margin-bottom: 1rem;
+    }
+
+    .content-section {
+        padding: 1rem;
+    }
+
+    .d-flex.justify-content-between.flex-wrap.flex-md-nowrap {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start !important;
+    }
+
+    .btn-toolbar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row.g-4 {
+        gap: 1rem;
+    }
+}
+
+/* Fix content spacing below navbar */
+main {
+    margin-top: var(--navbar-height);
+}
+
+/* Fix navbar overlap */
+.navbar {
+    height: var(--navbar-height);
+}
+
+/* Ensure website name is always visible */
+.navbar-brand span {
+    display: inline !important;
+    white-space: nowrap;
+}
+
+/* Offcanvas close button positioning */
+.offcanvas-header .btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+#sidebarMenu {
+    z-index: 1045;
+}
+
+:root {
+    --sidebar-width: 230px;
+    --navbar-height: 70px;
+}
+
+/* Desktop sidebar */
+@media (min-width: 992px) {
+
+    #sidebarMenu {
+        position: fixed;
+        top: var(--navbar-height);
+        left: 0;
+        width: var(--sidebar-width);
+        height: calc(100vh - var(--navbar-height));
+        border-right: 1px solid #dee2e6;
+    }
+
+    main {
+        margin-left: var(--sidebar-width) !important;
+        width: auto !important;
+        flex: 1 0 auto;
+    }
+
+}
+
+/* Mobile and tablet */
+@media (max-width: 991.98px) {
+
+    #sidebarMenu {
+        width: var(--sidebar-width);
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+}
+
+/* Dashboard Mobile Navbar Fixes */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        height: 30px;
+        width: auto;
+    }
+
+    .navbar-brand span {
+        font-size: 0.9rem;
+    }
+
+    .navbar .container-fluid {
+        flex-wrap: nowrap;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+        /* Reduce gap after logo */
+    }
+}
+
+/* Fix nav link spacing for smaller desktop screens (overriding global style) */
+@media (min-width: 992px) and (max-width: 1250px) {
+    .nav-link {
+        margin: 0 5px !important;
+    }
 }

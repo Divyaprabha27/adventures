@@ -27,18 +27,14 @@
                 <span>Adventure Travel Agency</span>
             </a>
 
-
-
-
-
             <!-- 3rd Column: Actions (Right) -->
             <div class="d-flex align-items-center gap-3">
-                <!-- User is theoretically logged in, show User Profile or Log out -->
-                <div class="dropdown">
+                <!-- User dropdown (desktop only) -->
+                <div class="dropdown d-none d-lg-block">
                     <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
                         id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&w=100"
-                            alt="mdo" width="32" height="32" class="rounded-circle me-2">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" width="32"
+                            class="rounded-circle me-2">
                         <strong>John Doe</strong>
                     </a>
                     <ul class="dashboard-dropdown dropdown-menu dropdown-menu-end text-small shadow"
@@ -52,74 +48,109 @@
                     </ul>
                 </div>
 
-                <a href="dashboard.html" class="btn btn-gradient btn-sm rounded-pill px-3">Dashboard</a>
-
                 <!-- Theme Toggle -->
                 <button id="theme-toggle" class="btn btn-link nav-link p-0 ms-2" aria-label="Toggle Dark Mode">
                     <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
                 </button>
+
+                <!-- Hamburger button -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-        </div>
         </div>
     </nav>
 
-    <div class="container-fluid pt-5 mt-5">
-        <div class="row">
+    <div class="container-fluid" style="margin-top:70px;">
+        <div class="row" style="display: block;">
             <!-- Sidebar -->
-            <!-- Sidebar -->
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse h-100 min-vh-100 pt-3">
-                <div class="position-sticky pt-3">
+            <div id="sidebarMenu" class="offcanvas-lg offcanvas-end bg-light col-lg-2 col-md-3 sidebar" tabindex="-1">
+
+                <!-- Header (mobile only) -->
+                <div class="offcanvas-header border-bottom">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
+                        aria-label="Close"></button>
+
+                </div>
+
+                <!-- Body -->
+                <div class="offcanvas-body">
+
+                    <!-- USER PROFILE (mobile only) -->
+                    <div class="dropdown mb-3 d-lg-none">
+
+                        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                            data-bs-toggle="dropdown">
+
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" width="32"
+                                class="rounded-circle me-2">
+
+                            <strong>John Doe</strong>
+
+                        </a>
+
+                        <ul class="dropdown-menu shadow">
+
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+
+                            <li>
+                                <hr>
+                            </li>
+
+                            <li><a class="dropdown-item" href="index.html">Sign out</a></li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- SIDEBAR MENU -->
                     <ul class="nav flex-column">
+
                         <li class="nav-item">
                             <a class="nav-link active" href="#" data-page="overview">
                                 <i class="bi bi-speedometer2 me-2"></i>
                                 Overview
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-page="my-trips">
                                 <i class="bi bi-airplane me-2"></i>
                                 My Trips
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-page="saved-destinations">
                                 <i class="bi bi-heart me-2"></i>
                                 Saved Destinations
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-page="settings">
                                 <i class="bi bi-gear me-2"></i>
                                 Settings
                             </a>
                         </li>
+
                     </ul>
 
-                    <h6
-                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-                        <span>Upcoming Trips</span>
-                        <a class="link-secondary" href="#" aria-label="Add a new report">
-                            <i class="bi bi-plus-circle"></i>
-                        </a>
-                    </h6>
-                    <ul class="nav flex-column mb-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-file-text me-2"></i>
-                                Japan Expedition
-                            </a>
-                        </li>
-                    </ul>
                 </div>
-            </nav>
+
+            </div>
 
             <!-- Main Content -->
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+            <main class="col-lg-10 col-md-9">
                 <div id="content-area">
                     <!-- Overview Content -->
                     <div id="overview" class="content-section">
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                             <h1 class="h2">Dashboard</h1>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <div class="btn-group me-2">
@@ -225,7 +256,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Trip" style="height: 200px; object-fit: cover;">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        class="card-img-top" alt="Trip" style="height: 200px; object-fit: cover;">
                                     <div class="card-body">
                                         <h5 class="fw-bold">Tokyo Experience</h5>
                                         <p class="text-muted small mb-2">Japan • 10 Days</p>
@@ -238,7 +270,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Trip" style="height: 200px; object-fit: cover;">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        class="card-img-top" alt="Trip" style="height: 200px; object-fit: cover;">
                                     <div class="card-body">
                                         <h5 class="fw-bold">Paris Romance</h5>
                                         <p class="text-muted small mb-2">France • 5 Days</p>
@@ -254,7 +287,8 @@
 
                     <!-- Saved Destinations Content -->
                     <div id="saved-destinations" class="content-section" style="display: none;">
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                             <h1 class="h2">Saved Destinations</h1>
                             <span class="badge bg-primary rounded-pill">24 Saved</span>
                         </div>
@@ -262,7 +296,9 @@
                         <div class="row g-4">
                             <div class="col-md-4">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        class="card-img-top" alt="Destination"
+                                        style="height: 200px; object-fit: cover;">
                                     <div class="card-body">
                                         <h5 class="fw-bold">Santorini</h5>
                                         <p class="text-muted small mb-2">Greece</p>
@@ -277,7 +313,9 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        class="card-img-top" alt="Destination"
+                                        style="height: 200px; object-fit: cover;">
                                     <div class="card-body">
                                         <h5 class="fw-bold">Maldives</h5>
                                         <p class="text-muted small mb-2">Maldives</p>
@@ -292,7 +330,9 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        class="card-img-top" alt="Destination"
+                                        style="height: 200px; object-fit: cover;">
                                     <div class="card-body">
                                         <h5 class="fw-bold">Dubai</h5>
                                         <p class="text-muted small mb-2">UAE</p>
@@ -307,7 +347,9 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        class="card-img-top" alt="Destination"
+                                        style="height: 200px; object-fit: cover;">
                                     <div class="card-body">
                                         <h5 class="fw-bold">Iceland</h5>
                                         <p class="text-muted small mb-2">Iceland</p>
@@ -322,7 +364,9 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        class="card-img-top" alt="Destination"
+                                        style="height: 200px; object-fit: cover;">
                                     <div class="card-body">
                                         <h5 class="fw-bold">Norway Fjords</h5>
                                         <p class="text-muted small mb-2">Norway</p>
@@ -337,7 +381,9 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Destination" style="height: 200px; object-fit: cover;">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        class="card-img-top" alt="Destination"
+                                        style="height: 200px; object-fit: cover;">
                                     <div class="card-body">
                                         <h5 class="fw-bold">Machu Picchu</h5>
                                         <p class="text-muted small mb-2">Peru</p>
@@ -355,7 +401,8 @@
 
                     <!-- Settings Content -->
                     <div id="settings" class="content-section" style="display: none;">
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                             <h1 class="h2">Settings</h1>
                         </div>
 
@@ -377,7 +424,8 @@
                                                 <label class="form-label">Phone</label>
                                                 <input type="tel" class="form-control" value="+1 234 567 8900">
                                             </div>
-                                            <button type="submit" class="btn btn-gradient rounded-pill">Save Changes</button>
+                                            <button type="submit" class="btn btn-gradient rounded-pill">Save
+                                                Changes</button>
                                         </form>
                                     </div>
                                 </div>
@@ -387,17 +435,21 @@
                                         <h5 class="fw-bold mb-4">Security</h5>
                                         <div class="mb-3">
                                             <label class="form-label">Current Password</label>
-                                            <input type="password" class="form-control" placeholder="Enter current password">
+                                            <input type="password" class="form-control"
+                                                placeholder="Enter current password">
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">New Password</label>
-                                            <input type="password" class="form-control" placeholder="Enter new password">
+                                            <input type="password" class="form-control"
+                                                placeholder="Enter new password">
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Confirm New Password</label>
-                                            <input type="password" class="form-control" placeholder="Confirm new password">
+                                            <input type="password" class="form-control"
+                                                placeholder="Confirm new password">
                                         </div>
-                                        <button type="submit" class="btn btn-gradient rounded-pill">Update Password</button>
+                                        <button type="submit" class="btn btn-gradient rounded-pill">Update
+                                            Password</button>
                                     </div>
                                 </div>
 
@@ -405,7 +457,8 @@
                                     <div class="card-body">
                                         <h5 class="fw-bold mb-4">Preferences</h5>
                                         <div class="form-check form-switch mb-3">
-                                            <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                                            <input class="form-check-input" type="checkbox" id="emailNotifications"
+                                                checked>
                                             <label class="form-check-label" for="emailNotifications">
                                                 Email Notifications
                                             </label>
@@ -443,33 +496,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
-    
+
     <!-- Dashboard Navigation Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Get all sidebar navigation links
-            const navLinks = document.querySelectorAll('.sidebar .nav-link[data-page]');
+            const navLinks = document.querySelectorAll('#sidebarMenu .nav-link[data-page]');
             const contentSections = document.querySelectorAll('.content-section');
-            
+
             // Add click event listeners to navigation links
             navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
+
                     // Remove active class from all links
                     navLinks.forEach(l => l.classList.remove('active'));
-                    
+
                     // Add active class to clicked link
                     this.classList.add('active');
-                    
+
                     // Get the target page
                     const targetPage = this.getAttribute('data-page');
-                    
+
                     // Hide all content sections
                     contentSections.forEach(section => {
                         section.style.display = 'none';
                     });
-                    
+
                     // Show the target content section
                     const targetSection = document.getElementById(targetPage);
                     if (targetSection) {
@@ -477,6 +530,10 @@
                     }
                 });
             });
+
+            // Handle sidebar close button - REMOVED (Handled by Bootstrap data-bs-dismiss)
+
+            // Fix hamburger menu double-click issue - REMOVED (Handled by Bootstrap data-bs-toggle)
         });
     </script>
 </body>
