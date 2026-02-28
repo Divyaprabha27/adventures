@@ -62,6 +62,7 @@ body.dark-mode .navbar-toggler-icon {
     align-items: center;
     gap: 10px;
     transition: color var(--transition-speed);
+    white-space: nowrap;
 }
 
 body.dark-mode .navbar-brand {
@@ -78,10 +79,6 @@ body.dark-mode .navbar-brand {
 }
 
 @media (min-width: 992px) and (max-width: 1250px) {
-    .navbar-brand span {
-        display: none;
-    }
-
     .nav-link {
         margin: 0 5px;
         font-size: 0.95rem;
@@ -92,9 +89,9 @@ body.dark-mode .navbar-brand {
         font-size: 0.8rem;
     }
 
-    /* Set navbar brand span font size to 1rem for 1136px view */
     .navbar-brand span {
         font-size: 1rem !important;
+        display: inline-block !important;
     }
 }
 
@@ -173,6 +170,11 @@ body.dark-mode .nav-link.active {
 
 /* Ensure Dropdown is visible on mobile dashboard */
 @media (max-width: 991.98px) {
+    .navbar {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
     .dropdown-menu {
         position: absolute;
         z-index: 1050;
@@ -509,8 +511,10 @@ body.dark-mode footer a.text-muted:hover {
     transition: color 0.2s ease;
 }
 
-.hover-primary:hover {
-    color: var(--primary-color) !important;
+/* Footer Brand Name text-nowrap */
+footer .navbar-brand span,
+footer a span {
+    white-space: nowrap !important;
 }
 
 body.dark-mode .btn-outline-secondary {
